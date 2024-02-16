@@ -84,7 +84,9 @@ export default function AnimalQuiz() {
               {result.question} = {result.chosenAnswer} {result.chosenAnswer === result.correctAnswer ? '✅' : '❌'}
             </Text>
           ))}
-          <Button title="Restart Quiz" onPress={initializeQuiz} />
+          <View style={styles.buttonContainer}>
+            <Button title="Restart Quiz" onPress={initializeQuiz} />
+          </View>
         </View>
       );
     } else {
@@ -148,5 +150,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 5,
     textAlign: 'center',
+  },
+  buttonContainer: {
+    marginTop: 20, // Add more space above the button
   },
 });
