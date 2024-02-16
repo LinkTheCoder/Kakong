@@ -1,0 +1,125 @@
+{
+    "questions": [
+      {
+        "hangul_letter": "ㄱ",
+        "answer": "G",
+        "options": ["B", "G", "D"]
+      },
+      {
+        "hangul_letter": "ㄴ",
+        "answer": "N",
+        "options": ["D", "N", "M"]
+      },
+      {
+        "hangul_letter": "ㄷ",
+        "answer": "D",
+        "options": ["G", "D", "R"]
+      },
+      {
+        "hangul_letter": "ㄹ",
+        "answer": "R",
+        "options": ["T", "R", "L"]
+      },
+      {
+        "hangul_letter": "ㅁ",
+        "answer": "M",
+        "options": ["N", "M", "L"]
+      },
+      {
+        "hangul_letter": "ㅂ",
+        "answer": "B",
+        "options": ["P", "B", "S"]
+      },
+      {
+        "hangul_letter": "ㅅ",
+        "answer": "S",
+        "options": ["D", "S", "Y"]
+      },
+      {
+        "hangul_letter": "ㅇ",
+        "answer": "Y",
+        "options": ["M", "Y", "H"]
+      },
+      {
+        "hangul_letter": "ㅈ",
+        "answer": "J",
+        "options": ["C", "J", "F"]
+      },
+      {
+        "hangul_letter": "ㅊ",
+        "answer": "Ch",
+        "options": ["Sh", "Ch", "Zh"]
+      },
+      {
+        "hangul_letter": "ㅋ",
+        "answer": "K",
+        "options": ["Q", "K", "X"]
+      },
+      {
+        "hangul_letter": "ㅌ",
+        "answer": "T",
+        "options": ["P", "T", "H"]
+      },
+      {
+        "hangul_letter": "ㅍ",
+        "answer": "P",
+        "options": ["F", "P", "B"]
+      },
+      {
+        "hangul_letter": "ㅎ",
+        "answer": "H",
+        "options": ["T", "H", "R"]
+      },
+      {
+        "hangul_letter": "ㅏ",
+        "answer": "A",
+        "options": ["O", "A", "Y"]
+      },
+      {
+        "hangul_letter": "ㅑ",
+        "answer": "Ya",
+        "options": ["O", "Ya", "Yi"]
+      },
+      {
+        "hangul_letter": "ㅓ",
+        "answer": "Eo",
+        "options": ["I", "Eo", "U"]
+      },
+      {
+        "hangul_letter": "ㅕ",
+        "answer": "Yeo",
+        "options": ["Ye", "Yeo", "Yu"]
+      },
+      {
+        "hangul_letter": "ㅣ",
+        "answer": "I",
+        "options": ["U", "I", "E"]
+      },
+      {
+        "hangul_letter": "ㅗ",
+        "answer": "O",
+        "options": ["A", "O", "Y"]
+      },
+      {
+        "hangul_letter": "ㅛ",
+        "answer": "Yo",
+        "options": ["Yi", "Yo", "Yu"]
+      },
+      {
+        "hangul_letter": "ㅜ",
+        "answer": "U",
+        "options": ["I", "E", "U"]
+      },
+      {
+        "hangul_letter": "ㅠ",
+        "answer": "Yu",
+        "options": ["Ye", "Yeo", "Yu"]
+      },
+      {
+        "hangul_letter": "ㅡ",
+        "answer": "Eu",
+        "options": ["Eo", "Eu", "Ui"]
+      }
+    ]
+  }
+  
