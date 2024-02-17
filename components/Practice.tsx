@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Pressable } from 'react-native';
+import { StyleSheet, Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { View, Text } from '@/components/Themed';
@@ -9,7 +9,15 @@ export default function TabOneScreen() {
   const navigation = useNavigation();
 
   const handleHangulPress = () => {
-    navigation.navigate('study/hangul'); // Navigate to the "Hangul" page
+    navigation.navigate('practice/hangul'); // Navigate to the "Hangul" page
+  };
+
+  const handleAnimalsPress = () => {
+    navigation.navigate('practice/animals'); // Navigate to the "Animals" page
+  };
+
+  const handleMoodsPress = () => {
+    navigation.navigate('practice/moods'); // Navigate to the "Animals" page
   };
 
   return (
@@ -22,11 +30,33 @@ export default function TabOneScreen() {
             <FontAwesome name="language" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Hangul</Text>
-              <Text style={styles.subText}>Learn the korean alphabet</Text>
+              <Text style={styles.subText}>Quiz of all 24 letters</Text>
             </View>
           </View>
         </Pressable>
-    </View>
+
+        {/* Animals Card component */}
+        <Pressable onPress={handleAnimalsPress} style={styles.card}>
+          <View style={styles.cardContent}>
+            <FontAwesome name="paw" size={24} color="white" style={styles.iconFontAwesome} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>Animals</Text>
+              <Text style={styles.subText}>Guess the animal quiz</Text>
+            </View>
+          </View>
+        </Pressable>
+      </View>
+
+             {/* Moods Card component */}
+                 <Pressable onPress={handleMoodsPress} style={styles.card}>
+              <View style={styles.cardContent}>
+                <FontAwesome name="smile-o" size={24} color="white" style={styles.iconFontAwesome} />
+                <View style={styles.textContainer}>
+                  <Text style={styles.title}>Moods</Text>
+                  <Text style={styles.subText}>Guess the mood quiz</Text>
+                </View>
+              </View>
+            </Pressable>
     </View>
   );
 }

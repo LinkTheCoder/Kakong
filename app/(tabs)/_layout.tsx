@@ -1,17 +1,16 @@
 import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { FontAwesome, FontAwesome6 } from '@expo/vector-icons';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
-
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginTop: 10 }} {...props} />;
+function TabBarIcon(props: any) {
+  // Check if FontAwesome6 icon is provided, if not, fallback to FontAwesome
+  const IconComponent = props.isFontAwesome6 ? FontAwesome6 : FontAwesome;
+
+  return <IconComponent size={28} style={{ marginTop: 10 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -35,7 +34,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />, // Assuming you are using FontAwesome icons here
           headerRight: () => (
             <Link href="/info" asChild>
               <Pressable>
@@ -53,17 +52,17 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="hangul"
-        options={{
-          title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="language" color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="study"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} isFontAwesome size={24}/>, // Using FontAwesome6 icon here
+        }}
+      />
+      <Tabs.Screen
+        name="practice"
+        options={{
+          title: '',
+          tabBarIcon: ({ color }) => <TabBarIcon name="pen-nib" color={color} isFontAwesome6 size={24}/>, // Using FontAwesome6 icon here
         }}
       />
     </Tabs>

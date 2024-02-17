@@ -3,7 +3,7 @@ import { StyleSheet, Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { View, Text } from '@/components/Themed';
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, FontAwesome6 } from '@expo/vector-icons';
 
 // Require the icon image
 const IconImage = require('../../assets/images/icon.png');
@@ -11,12 +11,12 @@ const IconImage = require('../../assets/images/icon.png');
 export default function TabOneScreen() {
   const navigation = useNavigation();
 
-  const handleHangulPress = () => {
-    navigation.navigate('hangul'); // Navigate to the "Hangul" page
+  const handleStudyPress = () => {
+    navigation.navigate('study'); // Navigate to the "Hangul" page
   };
 
-  const handleAnimalsPress = () => {
-    navigation.navigate('study'); // Navigate to the "Animals" page
+  const handlePracticePress = () => {
+    navigation.navigate('practice'); // Navigate to the "Animals" page
   };
 
   return (
@@ -26,24 +26,24 @@ export default function TabOneScreen() {
 
       {/* Cards */}
       <View style={styles.cardsContainer}>
-        {/* Hangul Card component */}
-        <Pressable onPress={handleHangulPress} style={styles.card}>
-          <View style={styles.cardContent}>
-            <FontAwesome name="language" size={24} color="white" style={styles.iconFontAwesome} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>Hangul</Text>
-              <Text style={styles.subText}>Quiz of all 24 letters</Text>
-            </View>
-          </View>
-        </Pressable>
-
-        {/* Animals Card component */}
-        <Pressable onPress={handleAnimalsPress} style={styles.card}>
+        {/* Study Card component */}
+        <Pressable onPress={handleStudyPress} style={styles.card}>
           <View style={styles.cardContent}>
             <FontAwesome name="book" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Study</Text>
-              <Text style={styles.subText}>Several quiz topics</Text>
+              <Text style={styles.subText}>Learn with Korean lessons</Text>
+            </View>
+          </View>
+        </Pressable>
+
+        {/* Practice Card component */}
+        <Pressable onPress={handlePracticePress} style={styles.card}>
+          <View style={styles.cardContent}>
+            <FontAwesome6 name="pen-nib" size={24} color="white" style={styles.iconFontAwesome} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>Practice</Text>
+              <Text style={styles.subText}>Practice quiz topics</Text>
             </View>
           </View>
         </Pressable>

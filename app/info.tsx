@@ -10,7 +10,7 @@ export default function ModalScreen() {
         <Text style={styles.title}>CREATED BY:</Text>
 
         <Link href="https://github.com/LinkTheCoder" style={styles.link}>
-          <Text style={styles.linkText}>LinkTheDev</Text>
+          <Text style={styles.linkText}>@LinkTheDev</Text>
         </Link>
       </View>
     </>
