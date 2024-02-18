@@ -1,59 +1,42 @@
 import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
 import { View, Text } from '@/components/Themed';
-import { FontAwesome } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
-export default function Study() {
+export default function LayoutGrammar() {
   const navigation = useNavigation();
 
-  const handleHangulPress = () => {
-    navigation.navigate('study/hangul'); // Navigate to the "Hangul" page
+  const handleParticlesPress = () => {
+    navigation.navigate('study/animals'); // Navigate to the "Hangul" page
   };
 
-  const handleGrammarPress = () => {
-    navigation.navigate('study/grammar'); // Navigate to the "Grammar" page
-  };
-
-  const handleVocabularyPress = () => {
-    navigation.navigate('study/vocabulary'); // Navigate to the "Vocabulary" page
+  const handleMoodsPress = () => {
+    navigation.navigate('study/moods'); // Navigate to the "Moods" page
   };
 
   return (
     <View style={styles.container}>
       {/* Cards */}
       <View style={styles.cardsContainer}>
-        {/* Hangul Card component */}
-        <Pressable onPress={handleHangulPress} style={styles.card}>
+        {/* Particles Card component */}
+        <Pressable onPress={handleParticlesPress} style={styles.card}>
           <View style={styles.cardContent}>
-            <FontAwesome name="language" size={24} color="white" style={styles.iconFontAwesome} />
+            <FontAwesome name="paw" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
-              <Text style={styles.title}>Hangul</Text>
-              <Text style={styles.subText}>Learn the Korean alphabet</Text>
+              <Text style={styles.title}>Animals</Text>
+              <Text style={styles.subText}>Learn korean animal names</Text>
             </View>
           </View>
         </Pressable>
 
-        {/* Grammar Card component */}
-        <Pressable onPress={handleGrammarPress} style={styles.card}>
+        {/* Moods Card component */}
+        <Pressable onPress={handleMoodsPress} style={styles.card}>
           <View style={styles.cardContent}>
-            <Ionicons name="text" size={24} color="white" style={styles.iconFontAwesome} />
+            <FontAwesome name="smile-o" size={24} color="white" style={styles.iconIonicons} />
             <View style={styles.textContainer}>
-              <Text style={styles.title}>Grammar</Text>
-              <Text style={styles.subText}>Learn Korean grammar</Text>
-            </View>
-          </View>
-        </Pressable>
-
-        {/* Vocabulary Card component */}
-        <Pressable onPress={handleVocabularyPress} style={styles.card}>
-          <View style={styles.cardContent}>
-            <Ionicons name="book" size={24} color="white" style={styles.iconFontAwesome} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>Vocabulary</Text>
-              <Text style={styles.subText}>Learn Korean vocabulary</Text>
+              <Text style={styles.title}>Moods</Text>
+              <Text style={styles.subText}>Learn korean mood words</Text>
             </View>
           </View>
         </Pressable>
@@ -95,6 +78,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   iconFontAwesome: {
+    marginBottom: 10, // Add margin bottom to separate the icon from the text
+    fontSize: 24,
+  },
+  iconIonicons: {
     marginBottom: 10, // Add margin bottom to separate the icon from the text
     fontSize: 24,
   },

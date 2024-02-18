@@ -1,59 +1,27 @@
 import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
 import { View, Text } from '@/components/Themed';
-import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Study() {
+export default function LayoutGrammar() {
   const navigation = useNavigation();
 
-  const handleHangulPress = () => {
-    navigation.navigate('study/hangul'); // Navigate to the "Hangul" page
-  };
-
-  const handleGrammarPress = () => {
-    navigation.navigate('study/grammar'); // Navigate to the "Grammar" page
-  };
-
-  const handleVocabularyPress = () => {
-    navigation.navigate('study/vocabulary'); // Navigate to the "Vocabulary" page
+  const handleParticlesPress = () => {
+    navigation.navigate('study/particles'); // Navigate to the "Hangul" page
   };
 
   return (
     <View style={styles.container}>
       {/* Cards */}
       <View style={styles.cardsContainer}>
-        {/* Hangul Card component */}
-        <Pressable onPress={handleHangulPress} style={styles.card}>
-          <View style={styles.cardContent}>
-            <FontAwesome name="language" size={24} color="white" style={styles.iconFontAwesome} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>Hangul</Text>
-              <Text style={styles.subText}>Learn the Korean alphabet</Text>
-            </View>
-          </View>
-        </Pressable>
-
-        {/* Grammar Card component */}
-        <Pressable onPress={handleGrammarPress} style={styles.card}>
+        {/* Particles Card component */}
+        <Pressable onPress={handleParticlesPress} style={styles.card}>
           <View style={styles.cardContent}>
             <Ionicons name="text" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
-              <Text style={styles.title}>Grammar</Text>
-              <Text style={styles.subText}>Learn Korean grammar</Text>
-            </View>
-          </View>
-        </Pressable>
-
-        {/* Vocabulary Card component */}
-        <Pressable onPress={handleVocabularyPress} style={styles.card}>
-          <View style={styles.cardContent}>
-            <Ionicons name="book" size={24} color="white" style={styles.iconFontAwesome} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>Vocabulary</Text>
-              <Text style={styles.subText}>Learn Korean vocabulary</Text>
+              <Text style={styles.title}>는/은 & 를/을</Text>
+              <Text style={styles.subText}>Korean Particles</Text>
             </View>
           </View>
         </Pressable>

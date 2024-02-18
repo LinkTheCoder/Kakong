@@ -7,7 +7,7 @@ export default function ModalScreen() {
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.title}>CREATED BY:</Text>
+        <Text style={styles.title}>CREATED BY</Text>
 
         <Link href="https://github.com/LinkTheCoder" style={styles.link}>
           <Text style={styles.linkText}>@LinkTheDev</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 20,
-    color: '#2e78b7',
     fontWeight: 'bold',
+    color: 'lightgreen',
   },
 });
