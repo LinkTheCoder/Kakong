@@ -15,7 +15,7 @@ export default function ModalScreen() {
 
         <Text style={styles.explanation}>
           Hangul, the Korean alphabet, is a phonetic writing system created in the 15th century.{'\n\n'}
-          It consists of 14 consonants and 10 vowels, which are combined to form syllabic blocks representing sounds.
+          It consists of 14 consonants and 10 vowels, which are combined to form syllabic blocks representing sounds.{'\n\n'}
           Hangul is known for its simplicity and logical structure.{'\n\n'}
         </Text>
         

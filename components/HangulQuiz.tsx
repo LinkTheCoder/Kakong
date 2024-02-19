@@ -71,6 +71,7 @@ export default function HangulQuiz() {
               {result.hangulLetter} = {result.chosenAnswer} {result.chosenAnswer === result.correctAnswer ? '✅' : '❌'}
             </Text>
           ))}
+          <View style={styles.buttonContainer}></View>
           <Button title="Restart Quiz" onPress={restartQuiz} />
         </View>
       );
@@ -130,5 +131,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 5,
     textAlign: 'center',
+    color: 'white',
+  },
+  buttonContainer: {
+    marginTop: 20, // Add more space above the button
   },
 });

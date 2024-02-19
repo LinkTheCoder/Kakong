@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, Image, Pressable } from 'react-native';
+import { StyleSheet, Image, Pressable, Dimensions } from 'react-native'; // Import Dimensions
 import { useNavigation } from '@react-navigation/native';
-
 import { View, Text } from '@/components/Themed';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -9,34 +8,37 @@ export default function TabOneScreen() {
   const navigation = useNavigation();
 
   const handleHangulPress = () => {
-    navigation.navigate('practice/hangul'); // Navigate to the "Hangul" page
+    navigation.navigate('practice/hangul');
   };
 
   const handleAnimalsPress = () => {
-    navigation.navigate('practice/animals'); // Navigate to the "Animals" page
+    navigation.navigate('practice/animals');
   };
 
   const handleMoodsPress = () => {
-    navigation.navigate('practice/moods'); // Navigate to the "Animals" page
+    navigation.navigate('practice/moods');
   };
+
+  // Get screen dimensions
+  const { width } = Dimensions.get('window');
+
+  // Calculate card width based on screen dimensions
+  const cardWidth = width > 600 ? width * 0.2 : width * 0.5;
 
   return (
     <View style={styles.container}>
-      {/* Cards */}
       <View style={styles.cardsContainer}>
-        {/* Hangul Card component */}
-        <Pressable onPress={handleHangulPress} style={styles.card}>
+        <Pressable onPress={handleHangulPress} style={[styles.card, { width: cardWidth }]}>
           <View style={styles.cardContent}>
             <FontAwesome name="language" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
-              <Text style={styles.title}>Hangul</Text>
+              <Text style={styles.title}>Hangeul</Text>
               <Text style={styles.subText}>Quiz of all 24 letters</Text>
             </View>
           </View>
         </Pressable>
 
-        {/* Animals Card component */}
-        <Pressable onPress={handleAnimalsPress} style={styles.card}>
+        <Pressable onPress={handleAnimalsPress} style={[styles.card, { width: cardWidth }]}>
           <View style={styles.cardContent}>
             <FontAwesome name="paw" size={24} color="white" style={styles.iconFontAwesome} />
             <View style={styles.textContainer}>
@@ -45,18 +47,17 @@ export default function TabOneScreen() {
             </View>
           </View>
         </Pressable>
-      </View>
 
-             {/* Moods Card component */}
-                 <Pressable onPress={handleMoodsPress} style={styles.card}>
-              <View style={styles.cardContent}>
-                <FontAwesome name="smile-o" size={24} color="white" style={styles.iconFontAwesome} />
-                <View style={styles.textContainer}>
-                  <Text style={styles.title}>Moods</Text>
-                  <Text style={styles.subText}>Guess the mood quiz</Text>
-                </View>
-              </View>
-            </Pressable>
+        <Pressable onPress={handleMoodsPress} style={[styles.card, { width: cardWidth }]}>
+          <View style={styles.cardContent}>
+            <FontAwesome name="smile-o" size={24} color="white" style={styles.iconFontAwesome} />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>Moods</Text>
+              <Text style={styles.subText}>Guess the mood quiz</Text>
+            </View>
+          </View>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -67,34 +68,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  icon: {
-    width: '70%', // Set the width to 70% of the screen width
-    aspectRatio: 1, // Maintain aspect ratio
-    marginBottom: 10, // Add margin bottom to separate the icon from the cards
-  },
   cardsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
   card: {
-    backgroundColor: 'transparent', // Set background color to transparent
+    backgroundColor: 'transparent',
     padding: 20,
     margin: 10,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden', // Ensure no overflow content is visible
-    borderWidth: 1, // Add border width
-    borderColor: 'gray', // Set border color to gray
-    width: '45%', // Set card width to 45% of the container width
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'gray',
   },
   cardContent: {
-    flexDirection: 'column', // Change to column layout to stack elements vertically
+    flexDirection: 'column',
     alignItems: 'center',
   },
   iconFontAwesome: {
-    marginBottom: 10, // Add margin bottom to separate the icon from the text
+    marginBottom: 10,
     fontSize: 24,
   },
   textContainer: {

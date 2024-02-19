@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 5,
     textAlign: 'center',
+    color: 'white',
   },
   buttonContainer: {
     marginTop: 20, // Add more space above the button
