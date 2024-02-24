@@ -3,7 +3,7 @@
     "name": "kakong",
     "slug": "kakong",
     "backgroundColor": "#1a202c",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
