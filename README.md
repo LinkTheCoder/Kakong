@@ -3,7 +3,10 @@
 
 <img src="https://i.imgur.com/pi4xZZe.png" width="30%" />
 
-- A React Native - Expo App
+🔠 Learn Hangeul
+📖 Learn Grammar
+🐶 Learn Vocabulary
+✍️ Several Quizzes
 
 > [!NOTE]
 > In progress
