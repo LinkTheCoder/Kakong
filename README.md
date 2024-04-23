@@ -10,6 +10,3 @@
 🐶 Learn Vocabulary
 
 ✍️ Several Quizzes
-
-> [!NOTE]
-> In progress
